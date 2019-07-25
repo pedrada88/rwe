@@ -33,7 +33,7 @@ If you use any of these resources, please cite the following [paper](https://arx
 }
 
 ```
-If you use [FastText](https://github.com/facebookresearch/fastText) or [Relative](https://github.com/pedrada88/relative), please also cite its corresponding paper.
+If you use [FastText](https://github.com/facebookresearch/fastText) or [Relative](https://github.com/pedrada88/relative), please also cite their corresponding paper/s.
 
 License
 -------
