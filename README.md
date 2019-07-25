@@ -12,7 +12,7 @@ We release the 300-dimensional embeddings trained on the English Wikipedia used 
 
 *Note 1:* All vocabulary words are lowercased.
 
-*Note 2:* If you want to convert the binary embedding files to *txt*, you can use convertvec.
+*Note 2:* If you want to convert the *txt* files to *bin*, you can use [convertvec](https://github.com/marekrei/convertvec).
 
 *Note 3:* Underscore "_" is used to separate tokens in a multiword expression (e.g. united_states) in the corpus. Double underscore ("__") is used to separate words within the word pair (e.g. paris__france) in the relation embedding files.
 
@@ -33,7 +33,7 @@ If you use any of these resources, please cite the following [paper](https://arx
 }
 
 ```
-If you use FastText, please also cite its corresponding paper.
+If you use [FastText](https://github.com/facebookresearch/fastText) or [Relative](https://github.com/pedrada88/relative), please also cite its corresponding paper.
 
 License
 -------
