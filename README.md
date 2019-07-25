@@ -7,8 +7,8 @@ Repository containing data and code of the ACL-19 paper *[Relational Word Embedd
 
 We release the 300-dimensional embeddings trained on the English Wikipedia used in our experiments:
 - [**FastText** word embeddings](https://drive.google.com/file/d/1SVB7E41c-xvwy61YL3hoDJHRi3RCgf-E/view?usp=sharing) \[300MB\].
-- [**Relative-init** relation embeddings (symmetrical)] (https://drive.google.com/file/d/17bxqdjmn6ZHWgwlstO5d1--3kVf4uQ0N/view?usp=sharing): \[6.0GB\]
-- [Output **RWE** relational word embeddings] (https://drive.google.com/file/d/1UjjEb6-80bbJ3GFMFhkRkjvWGULgKpfe/view?usp=sharing): \[300MB\]
+- [**Relative-init** relation embeddings (symmetrical)](https://drive.google.com/file/d/17bxqdjmn6ZHWgwlstO5d1--3kVf4uQ0N/view?usp=sharing): \[6.0GB\]
+- [Output **RWE** relational word embeddings](https://drive.google.com/file/d/1UjjEb6-80bbJ3GFMFhkRkjvWGULgKpfe/view?usp=sharing): \[300MB\]
 
 *Note 1:* All vocabulary words are lowercased.
 
