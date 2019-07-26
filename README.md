@@ -8,7 +8,8 @@ Repository containing data and code of the ACL-19 paper *[Relational Word Embedd
 We release the 300-dimensional embeddings trained on the English Wikipedia used in our experiments:
 - [**FastText**](https://drive.google.com/file/d/1SVB7E41c-xvwy61YL3hoDJHRi3RCgf-E/view?usp=sharing) word embeddings \[300MB\].
 - [**Relative-init**](https://drive.google.com/file/d/17bxqdjmn6ZHWgwlstO5d1--3kVf4uQ0N/view?usp=sharing) relation embeddings (symmetrical): \[6.0GB\]
-- Output [**RWE**](https://drive.google.com/file/d/1UjjEb6-80bbJ3GFMFhkRkjvWGULgKpfe/view?usp=sharing) relational word embeddings: \[300MB\]
+- Output [**RWE**](https://drive.google.com/file/d/1UjjEb6-80bbJ3GFMFhkRkjvWGULgKpfe/view?usp=sharing) relational word embeddings *(as in the reference paper)*: \[300MB\]
+- Output [**RWE**]() relational word embeddings *(with default parameters using the code below)*: \[300MB\]
 
 *Note 1:* All vocabulary words are lowercased.
 
@@ -18,7 +19,62 @@ We release the 300-dimensional embeddings trained on the English Wikipedia used 
 
 ### Code
 
-Coming soon.
+This repository contains the code to learn unsupervised relation word embeddings in a given text corpus. 
+
+**Requirements:**
+
+- Python (version 3.6.7 tested)
+- NumPy (version 1.16.4 tested)
+- PyTorch (version 1.1.0 tested)
+
+### Quick start: Get your own relational word embeddings
+
+```bash
+python -i train_RWE.py -word_embeddings INPUT_WORD_EMBEDDINGS -rel_embeddings INPUT_RELATION_EMBEDDINGS -output OUTPUT_RWE_EMBEDDINGS
+```
+
+The code takes as input standard word embeddings (FastText was used in the reference paper) and relation embeddings (i.e. embeddings for pairs of words). As input relation embeddings we used the [Relative package](https://github.com/pedrada88/relative) (WIC in this repository), mainly due to its efficienty compared to other similar methods, but any relation embeddings can be leveraged. To learn your own Relative relation embeddings you can simply run the following command (more information in the original Relative repository):
+
+```bash
+python relative_init.py -corpus INPUT_CORPUS -embeddings INPUT_WORD_EMBEDDINGS -symmetry true
+```
+
+where INPUT_CORPUS can be any tokenized corpus (English Wikipedia in our experiments).
+
+#### Example usage:
+
+A short example on how to use the RWE code:
+
+```bash
+python relative_init.py -corpus wikipedia_en_preprocessed.txt -embeddings fasttext_wikipedia_en_300d.bin
+```
+
+### Parameters
+
+A number of optional hyperparameters can be specified in the code. Below you can find these parameters and their default values:
+
+-hidden: Size of the hidden layer. Default: 0 (=twice the dimension of the input word embeddings)
+
+-dropout: Dropout rate. Default: 0.5
+
+-epochs: Number of epochs. Default: 5
+
+-interval: Size of intervals during training. Default: 100
+
+-batchsize: Batch size. Default: 10
+
+-devsize: Size of development data (proportion with respect to the full training set, from 0 to 1). Default: 0.015
+
+-lr: Learning rate for training. Default: 0.01
+
+#### Example:
+
+For example, if you would like more epochs and a smaller learning rate, you can type the following:
+
+```bash
+python -i train_RWE.py -word_embeddings fasttext_wiki_300d.txt -rel_embeddings relative-init_symm_wiki_en_300d.txt -output rwe_embeddings.txt -epochs 10 -lr 0.1
+```
+
 
 ### Reference paper
 
