@@ -6,10 +6,10 @@ Repository containing data and code of the ACL-19 paper *[Relational Word Embedd
 ### Pre-trained embeddings
 
 We release the 300-dimensional embeddings trained on the English Wikipedia used in our experiments:
-- [**FastText**](https://drive.google.com/file/d/1SVB7E41c-xvwy61YL3hoDJHRi3RCgf-E/view?usp=sharing) word embeddings \[300MB\].
-- [**Relative-init**](https://drive.google.com/file/d/17bxqdjmn6ZHWgwlstO5d1--3kVf4uQ0N/view?usp=sharing) relation embeddings (symmetrical): \[6.0GB\]
-- Output [**RWE**](https://drive.google.com/file/d/1UjjEb6-80bbJ3GFMFhkRkjvWGULgKpfe/view?usp=sharing) relational word embeddings *(as in the reference paper)*: \[300MB\]
-- Output [**RWE**]() relational word embeddings *(with default parameters using the code below)*: \[300MB\]
+- [**FastText**](https://drive.google.com/file/d/1SVB7E41c-xvwy61YL3hoDJHRi3RCgf-E/view?usp=sharing) word embeddings \[~300MB\].
+- [**Relative-init**](https://drive.google.com/file/d/17bxqdjmn6ZHWgwlstO5d1--3kVf4uQ0N/view?usp=sharing) relation embeddings (symmetrical): \[~6.0GB\]
+- Output [**RWE**](https://drive.google.com/file/d/1UjjEb6-80bbJ3GFMFhkRkjvWGULgKpfe/view?usp=sharing) relational word embeddings *(as in the reference paper)*: \[~300MB\]
+- Output [**RWE**]() relational word embeddings *(with default parameters using the code below)*: \[~300MB\]
 
 *Note 1:* All vocabulary words are lowercased.
 
@@ -69,7 +69,7 @@ A number of optional hyperparameters can be specified in the code. Below you can
 
 #### Example:
 
-For example, if you would like more epochs and a smaller learning rate, you can type the following:
+For example, if you would like more epochs (e.g. 10) and a higher learning rate (e.g. 0.1), you can type the following:
 
 ```bash
 python -i train_RWE.py -word_embeddings fasttext_wiki_300d.txt -rel_embeddings relative-init_symm_wiki_en_300d.txt -output rwe_embeddings.txt -epochs 10 -lr 0.1
