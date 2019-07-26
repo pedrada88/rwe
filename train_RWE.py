@@ -178,7 +178,7 @@ if __name__ == '__main__':
     print ("Number of dimensions output embeddings: "+str(num_dimensions))
     txtfile=open(output_path,'w',encoding='utf8')
     txtfile.write(str(num_vectors)+" "+str(num_dimensions)+"\n")
-    if num_vectors!=len(matrix_word_embeddings): print ("Something is wrong in the input vectors: "+str(len_vectors)+" != "+str(num_vectors))
+    if num_vectors!=embedding_weights.size()[0]: print ("Something is wrong in the input vectors: "+str(embedding_weights.size()[0])+" != "+str(num_vectors))
     for i in range(num_vectors):
         word=index2word[i]
         txtfile.write(word)
