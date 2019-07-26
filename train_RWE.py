@@ -36,7 +36,7 @@ def getRWEModel(embedding_size_input, embedding_size_output, embedding_weights,h
 def trainEpochs(model, optimizer, criterion, trainBatches, validBatches, epochs=10, interval=100, lr=0.1):
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, patience = 2, threshold = 1e-7, factor = 0.9)
     min_error=-1.0
-    for epoch in range(0, epochs):
+    for epoch in range(1, epochs+1):
         print("\n     ----------    \n")
         print ("EPOCH "+str(epoch))
         print ("Starting training epoch "+str(epoch))
