@@ -51,19 +51,19 @@ python -i train_RWE.py -word_embeddings fasttext_wikipedia_en_300d.txt -rel_embe
 
 A number of optional hyperparameters can be specified in the code. Below you can find these parameters and their default values:
 
--hidden: Size of the hidden layer. Default: 0 (=twice the dimension of the input word embeddings)
+*-hidden*: Size of the hidden layer. Default: 0 (=twice the dimension of the input word embeddings)
 
--dropout: Dropout rate. Default: 0.5
+*-dropout*: Dropout rate. Default: 0.5
 
--epochs: Number of epochs. Default: 5
+*-epochs*: Number of epochs. Default: 5
 
--interval: Size of intervals during training. Default: 100
+*-interval*: Size of intervals during training. Default: 100
 
--batchsize: Batch size. Default: 10
+*-batchsize*: Batch size. Default: 10
 
--devsize: Size of development data (proportion with respect to the full training set, from 0 to 1). Default: 0.015
+*-devsize*: Size of development data (proportion with respect to the full training set, from 0 to 1). Default: 0.015
 
--lr: Learning rate for training. Default: 0.01
+*-lr*: Learning rate for training. Default: 0.01
 
 #### Example:
 
