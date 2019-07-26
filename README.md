@@ -1,7 +1,6 @@
 # rwe
 
-Repository containing data and code of the ACL-19 paper *[Relational Word Embeddings](https://arxiv.org/abs/1906.01373)*  (ACL 2019).
-
+Repository containing data (pre-trained embeddings) and code of the ACL-19 paper *[Relational Word Embeddings](https://arxiv.org/abs/1906.01373)*  (ACL 2019). With the code of this repository you can learn your own relational word embeddings from a text corpus.
 
 ### Pre-trained embeddings
 
@@ -74,6 +73,7 @@ For example, if you would like more epochs (e.g. 10) and a higher learning rate 
 python -i train_RWE.py -word_embeddings fasttext_wiki_300d.txt -rel_embeddings relative-init_symm_wiki_en_300d.txt -output rwe_embeddings.txt -epochs 10 -lr 0.1
 ```
 
+*Note:* This code has been tested on GPU for a higher speed, but could be run on CPU as well.
 
 ### Reference paper
 
@@ -88,7 +88,7 @@ If you use any of these resources, please cite the following [paper](https://arx
 }
 
 ```
-If you use [FastText](https://github.com/facebookresearch/fastText) or [Relative](https://github.com/pedrada88/relative), please also cite their corresponding paper/s.
+If you use [FastText](https://github.com/facebookresearch/fastText) or [Relative](https://github.com/pedrada88/relative), please also cite their corresponding paper/s as well.
 
 License
 -------
