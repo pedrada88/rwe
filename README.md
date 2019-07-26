@@ -32,7 +32,7 @@ This repository contains the code to learn unsupervised relation word embeddings
 python -i train_RWE.py -word_embeddings INPUT_WORD_EMBEDDINGS -rel_embeddings INPUT_RELATION_EMBEDDINGS -output OUTPUT_RWE_EMBEDDINGS
 ```
 
-The code takes as input standard word embeddings (FastText was used in the reference paper) and relation embeddings (i.e. embeddings for pairs of words), both in standard space-sparated *txt* formats (see pre-trained embeddings for exact format). As input relation embeddings we used the [Relative package](https://github.com/pedrada88/relative), mainly due to its efficiency compared to other similar methods, but any relation embeddings can be used as input. To learn your own Relative relation embeddings you can simply run the following command (more information in the original [Relative repository](https://github.com/pedrada88/relative)):
+The code takes as input standard word embeddings ([FastText](https://github.com/facebookresearch/fastText) with standard hyperparameters was used in the reference paper) and relation embeddings (i.e. embeddings for pairs of words), both in standard space-sparated *txt* formats (see pre-trained embeddings for exact format). As input relation embeddings we used the [Relative package](https://github.com/pedrada88/relative), mainly due to its efficiency compared to other similar methods, but any relation embeddings can be used as input. To learn your own Relative relation embeddings you can simply run the following command (more information in the original [Relative repository](https://github.com/pedrada88/relative)):
 
 ```bash
 python relative_init.py -corpus INPUT_CORPUS -embeddings INPUT_WORD_EMBEDDINGS -output OUTPUT_RELATIVE_EMBEDDINGS -symmetry true
