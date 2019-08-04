@@ -44,7 +44,7 @@ where INPUT_CORPUS can be any tokenized corpus (English Wikipedia in our experim
 A short example on how to use the RWE code:
 
 ```bash
-python -i train_RWE.py -word_embeddings fasttext_wikipedia_en_300d.txt -rel_embeddings relative-init_symm_wiki_en_300d.txt -output rwe_embeddings.txt
+python train_RWE.py -word_embeddings fasttext_wikipedia_en_300d.txt -rel_embeddings relative-init_symm_wiki_en_300d.txt -output rwe_embeddings.txt
 ```
 
 ### Parameters
@@ -70,7 +70,7 @@ A number of optional hyperparameters can be specified in the code. Below you can
 For example, if you would like more epochs (e.g. 10) and a higher learning rate (e.g. 0.1), you can type the following:
 
 ```bash
-python -i train_RWE.py -word_embeddings fasttext_wiki_300d.txt -rel_embeddings relative-init_symm_wiki_en_300d.txt -output rwe_embeddings.txt -epochs 10 -lr 0.1
+python train_RWE.py -word_embeddings fasttext_wiki_300d.txt -rel_embeddings relative-init_symm_wiki_en_300d.txt -output rwe_embeddings.txt -epochs 10 -lr 0.1
 ```
 
 *Note:* This code has been tested on GPU for a higher speed, but could be run on CPU as well.
