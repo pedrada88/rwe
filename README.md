@@ -79,12 +79,17 @@ python train_RWE.py -word_embeddings fasttext_wiki_300d.txt -rel_embeddings rela
 
 If you use any of these resources, please cite the following [paper](https://www.aclweb.org/anthology/P19-1318):
 ```bash
-@InProceedings{camachocollados:acl2019rwe,
-  author = 	"Camacho-Collados, Jose and Espinosa-Anke, Luis and Schockaert, Steven",
-  title = 	"Relational Word Embeddings",
-  booktitle = 	"Proceedings of ACL",
-  year = 	"2019",
-  location = 	"Florence, Italy"
+@inproceedings{camacho-collados-etal-2019-relational,
+    title = "Relational Word Embeddings",
+    author = "Camacho-Collados, Jose  and
+      Espinosa Anke, Luis  and
+      Schockaert, Steven",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P19-1318",
+    pages = "3286--3296"
 }
 
 ```
