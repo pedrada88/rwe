@@ -1,4 +1,4 @@
-# rwe
+# Relational Word Embeddings
 
 Repository containing data (pre-trained embeddings) and code of the paper *[Relational Word Embeddings](https://www.aclweb.org/anthology/P19-1318)*  (ACL 2019). With the code of this repository you can learn your own relational word embeddings from a text corpus.
 
